@@ -1,3 +1,7 @@
+"********************************************************
+"* My Basics
+"********************************************************
+
 set guifont=Consolas:h22
 "set noerrorbells
 set clipboard=unnamed
@@ -7,7 +11,6 @@ set complete+=kspell
 
 noremap <Leader>\t :botright vertical terminal <CR>
 set wildmenu
-
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -18,6 +21,10 @@ set smartindent
 
 set wrap
 set incsearch
+
+"********************************************************
+"* Plugins
+"********************************************************
 
 call plug#begin('~/.vim/plugged')
 	"Plug 'ycm-core/YouCompleteMe'
@@ -30,11 +37,18 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'
 call plug#end()
 
+
+"********************************************************
+"* Terminal Theme
+"********************************************************
+
 syntax enable 
 colorscheme dracula 
 set backspace=indent,eol,start
 
-" netrw(file manager)
+"********************************************************
+"* File Manager
+"********************************************************
 
 let g:newtrw_banner =0
 "let g:ctrlp_use_catching = 0
@@ -57,3 +71,4 @@ set showmatch
 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+
